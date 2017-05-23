@@ -21,6 +21,7 @@ var app = app || {};
     .then(
       (data) => data.foreach(repo => repos.all.push(repo))
     )
+    callback();
   };
 
 

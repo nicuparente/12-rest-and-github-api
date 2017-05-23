@@ -112,6 +112,8 @@ app.delete('/articles', (request, response) => {
   .catch(console.error);
 });
 
+app.get('*', (request, response) => response.sendFile('index.html', {root: './public'}));
+
 loadDB();
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
