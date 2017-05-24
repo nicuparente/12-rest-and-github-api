@@ -23,8 +23,9 @@ var app = app || {};
         data.forEach(repo => {
           repos.all.push(repo);
         })
+        callback();
       });
-    callback();
+    
   };
 
   // REVIEW: Model method that filters the full collection for repos with a particular attribute.
